@@ -13,4 +13,9 @@ class Article extends Model
     protected $guarded = [
         "id",
     ];
+
+    public function users()
+    {
+        return $this->hasOne(User::class);
+    }
 }
